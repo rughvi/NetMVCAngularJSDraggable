@@ -1,0 +1,27 @@
+﻿<div class="myContextRoot">
+    <div class="outer">
+        <div class="inner">
+            <div ng-repeat="item in list track by $index" style="top:{{item.top || 0}}px; left: {{item.left || 0}}px" class="greenBox">
+                <div class="handle" draggable index="{{$index}}">
+                    <div>{{item.name}}</div>
+                    <div>{{item.top}}</div>
+                    <div>{{item.left}}</div>
+                    <div ng-if="item.type === 'text'" class="childText" draggable>
+                        this is text
+                    </div>
+                    <div ng-if="item.type === 'image'" class="childImage" draggable>
+                        this is image
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div ng-repeat="item in list" class="items">
+        <div ng-if="item.type === 'text'" class="childText" draggable>
+            this is text
+        </div>
+        <div ng-if="item.type === 'image'" class="childImage" draggable>
+            this is image
+        </div>
+    </div>-->
+</div>
